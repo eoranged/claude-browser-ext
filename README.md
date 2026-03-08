@@ -44,6 +44,22 @@ npm run build           # Chrome
 npm run build:firefox   # Firefox
 ```
 
+## CLI
+
+The same `bridge.py` script doubles as a CLI client for querying the running server.
+
+```bash
+python bridge.py status                          # check server & extension
+python bridge.py tabs                            # list enabled tabs
+python bridge.py url TAB_ID                      # get tab URL
+python bridge.py dom TAB_ID                      # get tab DOM (HTML)
+python bridge.py eval TAB_ID 'document.title'    # execute JavaScript
+python bridge.py screenshot TAB_ID -o shot.png   # capture tab screenshot
+python bridge.py events --type log --level error # query console errors
+```
+
+Add `--json` to any CLI command for raw JSON output. Use `--host` / `--port` / `--token` to override defaults.
+
 ## API
 
 All endpoints require `Authorization: Bearer <token>` header.

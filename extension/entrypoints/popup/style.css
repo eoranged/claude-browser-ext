@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  width: 320px;
+  padding: 16px;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* --- Power button --- */
+
+.power-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.power-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.power-btn:hover {
+  border-color: #9ca3af;
+  background: #f3f4f6;
+}
+
+.power-btn.on {
+  border-color: #22c55e;
+  background: #dcfce7;
+  color: #16a34a;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.25);
+}
+
+.power-btn.on:hover {
+  background: #bbf7d0;
+}
+
+.power-label {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.power-label.on {
+  color: #16a34a;
+}
+
+/* --- Connection --- */
+
+.connection {
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.connection.connected {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.connection.connecting {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.connection.disconnected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* --- Stats --- */
+
+.stats {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.stats td {
+  padding: 4px 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.stats td:last-child {
+  text-align: right;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Token --- */
+
+.token-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.token-row code {
+  flex: 1;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 11px;
+  background: #f3f4f6;
+  padding: 6px 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Port --- */
+
+.port-row {
+  display: flex;
+  gap: 6px;
+}
+
+.port-row input {
+  flex: 1;
+  font-size: 13px;
+  padding: 5px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+}
+
+.port-row input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+/* --- Buttons --- */
+
+button {
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #f9fafb;
+}
+
+button:active {
+  background: #f3f4f6;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  flex: 1;
+}

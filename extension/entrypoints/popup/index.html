@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Browser Bridge</h1>
+
+  <section class="power-section">
+    <button id="power-btn" class="power-btn off" title="Enable/disable for current tab">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path d="M12 3v8"/>
+        <path d="M18.36 6.64A9 9 0 1 1 5.64 6.64"/>
+      </svg>
+    </button>
+    <div id="power-label" class="power-label">Inactive</div>
+  </section>
+
+  <section>
+    <div id="connection" class="connection disconnected">Disconnected</div>
+  </section>
+
+  <section>
+    <label>Stats</label>
+    <table class="stats">
+      <tr><td>Enabled Tabs</td><td id="stat-tabs">0</td></tr>
+      <tr><td>Events</td><td id="stat-events">0</td></tr>
+      <tr><td>Errors</td><td id="stat-errors">0</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <label>Auth Token</label>
+    <div class="token-row">
+      <code id="token">&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;</code>
+      <button id="toggle-token">Show</button>
+      <button id="copy-token">Copy</button>
+    </div>
+  </section>
+
+  <section>
+    <label>Server Port</label>
+    <div class="port-row">
+      <input id="port" type="number" min="1024" max="65535">
+      <button id="save-port">Save</button>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button id="regenerate-token">Regen Token</button>
+    <button id="reset-stats">Reset Stats</button>
+  </section>
+
+  <script src="./main.ts" type="module"></script>
+</body>
+</html>

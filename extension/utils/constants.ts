@@ -1,0 +1,9 @@
+export const DEFAULT_PORT = 18321;
+export const RECONNECT_INITIAL_MS = 1000;
+export const RECONNECT_MAX_MS = 30000;
+export const KEEPALIVE_ALARM_NAME = 'bridge-keepalive';
+export const KEEPALIVE_INTERVAL_MINUTES = 0.4; // ~25 seconds
+export const STORAGE_KEY_TOKEN = 'bridge_token';
+export const STORAGE_KEY_PORT = 'bridge_port';
+export const MAX_EVENTS = 10000;
+export const MAX_BODY_SIZE = 262144; // 256KB
